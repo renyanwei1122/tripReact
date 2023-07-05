@@ -1,0 +1,51 @@
+.houseitemv9 {
+  width: 50%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.houseitemv9 .item {
+  position: relative;
+    color: #fff;
+    border-radius: 6px;
+}
+
+.houseitemv9 .cover img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.houseitemv9 .con {
+      width: 95%;
+      position: absolute;
+      bottom: 0;
+      left: 8px;
+}
+
+.houseitemv9 .con .summary {
+  font-size: 12px ;
+  font-family: PingFangSC-Regular, Helvetica Neue, sans-serif;
+}
+
+.houseitemv9 .con .houseName {
+        width: 150px;
+        font-size: 14px;
+        font-family: PingFangSC-Regular, Helvetica Neue, sans-serif;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+}
+
+.houseitemv9 .con .bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.houseitemv9 .con .bottom .rate {
+  --active-color: #fff;
+  --star-size: 12px;
+}
+
