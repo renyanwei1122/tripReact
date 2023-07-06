@@ -19,18 +19,9 @@ const DetialSwipe = memo((props) => {
       swipeGroup[item.enumPictureCategory].push(item)
     }
   }
-  for (const key in swipeGroup) {  
-     
-      const obj = {};  
-      obj[key] = swipeGroup[key];  
-      res.push(obj);  
+   
     
-  }  
-    
-  console.log(res);
-  
-  
-  console.log(res)
+  //console.log(res)
   //console.log(swipeGroup)
   //console.log(swipeGroup)
   
@@ -46,11 +37,12 @@ const DetialSwipe = memo((props) => {
       <div className='swipe'>
         <Swiper indicator={(total, current) => (
               <div className='custom-indicator'>
-                {res && res.map((item,index) => (
+                {swipeGroup && Object.keys(swipeGroup).map((item,index) => (
                   
-                  <span className={cx('item',{active: true})} key={index} >
-                    <span className='text'>{console.log((item['2'])[1]?.title)}</span>
-                    <span className='count'></span>
+                  <span className={cx('item',{active: HousePice[current]?.enumPictureCategory==item
+                  })} key={index} >
+                    <span className='text'>{getName(swipeGroup[item][0].title)}</span>
+                    { HousePice[current]?.enumPictureCategory==item && <span className='count'>{current+1}/{total}</span>}
                   </span>
                 ))}
                 
