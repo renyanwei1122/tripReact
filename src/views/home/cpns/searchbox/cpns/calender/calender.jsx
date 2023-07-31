@@ -28,12 +28,12 @@ const Calender = memo(() => {
   
 
   const dataChioce = (chioce) => {
-    setChioce(!chioce)
+    setChioce((chioce) => !chioce)
   }
   
   return (
     <CalenderWapper>
-      <div>
+      <div onScroll={(e)=>{if(chioce) return e.stopPropagation()}}>
         <div className="data-range" onClick={() => dataChioce(chioce)}>
             <div className="start">
               <span>入住</span>

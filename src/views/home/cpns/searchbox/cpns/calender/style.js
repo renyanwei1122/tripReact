@@ -64,5 +64,6 @@ export const CalenderWapper = styled.div`
   position: fixed;
   bottom: 0;
   background-color: #fff;
+  z-index: 999;
 }
 `
